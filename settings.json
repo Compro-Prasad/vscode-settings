@@ -1,0 +1,34 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "Office Code Pro",
+
+    "editor.fontSize": 14,
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "vim.useSystemClipboard": true,
+
+    "javascript.validate.enable": false,
+
+    "vim.otherModesKeyBindings": [
+        {
+            "before": ["J"],
+            "after": ["ctrl+f"]
+        },
+        {
+            "before": ["K"],
+            "after": ["ctrl+b"]
+        }
+    ],
+
+    "ruby.lint": {
+        "rubocop": true
+    },
+
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "blink",
+
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": true
+}
