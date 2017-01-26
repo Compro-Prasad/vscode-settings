@@ -12,22 +12,13 @@ seen in many other dotfiles. To install, just run:
 rake install
 ```
 
-## Still To Do
+## Synchronizing Extensions
 
-I'd like to keep my VSCode extensions in sync as well; however, VSCode
-currently just keeps them in a directory (as opposed to having a file that
-tracks them). This is fine, but I'd rather only keep a file of extension names
-instead of the extensions themselves.
-
-See below for notes:
+Visual Studio Code extensions are currently tracked fully by them being
+dropped in the `/.vscode/extensions` directory. To keep a list of only the
+extensions, you need to sync them down to `extensions.json`. To do this,
+just run:
 
 ```sh
-code --list-extensions
-# same list as...
-ls ~/.vscode/extensions
+rake sync
 ```
-
-* [x] either symlink the entire Code directory or individual settings, keybindings files plus snippets directory
-* [ ] just track extensions in some file... json or yaml or whatever... then have a command to install/sync them
-	* so, spin list-extensions and sync/compare with local file and install ones that don't exist
-	* sort of like how that Emacs package thing worked???

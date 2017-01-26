@@ -1,0 +1,18 @@
+[
+  "CraigMaslowski.erb",
+  "EditorConfig.EditorConfig",
+  "Orta.vscode-jest",
+  "PeterJausovec.vscode-docker",
+  "azemoh.one-monokai",
+  "bogdan-sinitsa.theme-dark-monokai",
+  "capaj.vscode-exports-autocomplete",
+  "dbaeumer.vscode-eslint",
+  "eg2.tslint",
+  "esbenp.prettier-vscode",
+  "felixfbecker.php-debug",
+  "ms-vscode.csharp",
+  "msjsdiag.debugger-for-chrome",
+  "rebornix.Ruby",
+  "shinnn.stylelint",
+  "vscodevim.vim"
+]

@@ -1,24 +1,79 @@
 require 'rake'
+require 'json'
 
 desc 'Link vscode settings'
 task :install do
   %w(settings.json keybindings.json snippets).each do |setting|
     link_path setting
   end
+
+  stored_extensions = JSON.parse(File.read(extensions_file_path))
+  not_yet_installed = installed_extensions - stored_extensions
+
+  if not_yet_installed.any?
+    not_yet_installed.each do |extension|
+      _result = `code --install-extension #{extension}`
+    end
+  else
+    puts 'no new extensions to install'
+  end
 end
 
-desc 'Sync extensions'
+desc 'Sync installed extensions'
 task :sync do
-  # TODO: figure out a good way to sync these...
+  File.open(extensions_file_path, 'w') do |f|
+    f.write(JSON.pretty_generate(installed_extensions))
+  end
+end
+
+def extensions_file_path
+  "#{Dir.pwd}/extensions.json"
+end
+
+def installed_extensions
+  `code --list-extensions`.split("\n")
 end
 
 def link_path(file)
   puts "linking #{file}"
 
+  link, target = link_and_target(file)
+
+  if File.exist?(link)
+    skip_or_replace(link, target)
+  else
+    link_system_call(link, target)
+  end
+end
+
+def skip_or_replace(link, target)
+  if File.identical?(target, link)
+    puts "identical #{link}"
+  else
+    print "overwrite #{link}? [ynq] "
+    case $stdin.gets.chomp
+    when 'y'
+      replace_file(file)
+    when 'q'
+      exit
+    else
+      puts "skipping #{link}"
+    end
+  end
+end
+
+def replace_file(file)
+  link, _target = link_and_target
+
+  FileUtils.rm_rf(link)
+  link_file(file)
+end
+
+def link_and_target(file)
   link = "#{root_path}/#{file}"
   target = "#{Dir.pwd}/#{file}"
 
-  link_system_call(link, target)
+  [link, target]
 end
 
 def link_system_call(link, target)
