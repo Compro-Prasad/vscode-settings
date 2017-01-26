@@ -5,7 +5,7 @@ These are my [Visual Studio Code](https://code.visualstudio.com/) settings.
 ## Installation Instructions
 
 I'm making use of symlinks to point my VSCode settings to my actual dev folder.
-To make it easier to configure this, I've based my Rakefile off of what I've
+To make it easier to configure this, I've based my Rakefile off what I've
 seen in many other dotfiles. To install, just run:
 
 ```sh
@@ -22,3 +22,9 @@ just run:
 ```sh
 rake sync
 ```
+
+## Other Options
+
+There is already an extension called [Settings
+Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync).
+It stores all of your settings in a GitHub gist.
