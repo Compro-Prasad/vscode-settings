@@ -8,10 +8,11 @@ task :install do
   end
 
   stored_extensions = JSON.parse(File.read(extensions_file_path))
-  not_yet_installed = installed_extensions - stored_extensions
+  not_yet_installed = stored_extensions - installed_extensions
 
   if not_yet_installed.any?
     not_yet_installed.each do |extension|
+      puts "installing #{extension}"
       _result = `code --install-extension #{extension}`
     end
   else
@@ -78,10 +79,12 @@ end
 
 def link_system_call(link, target)
   if windows?
+    mklink_opts = File.directory?(target) ? '/J' : ''
+
     link.tr!('/', '\\')
     target.tr!('/', '\\')
 
-    system %(cmd /c mklink "#{link}" "#{target}")
+    system %(cmd /c mklink #{mklink_opts} "#{link}" "#{target}")
   else
     system %(ln -s "#{target}" "#{link}")
   end
