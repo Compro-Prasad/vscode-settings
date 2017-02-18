@@ -54,7 +54,7 @@ def skip_or_replace(link, target)
     print "overwrite #{link}? [ynq] "
     case $stdin.gets.chomp
     when 'y'
-      replace_file(file)
+      replace_file(link, target)
     when 'q'
       exit
     else
@@ -63,11 +63,9 @@ def skip_or_replace(link, target)
   end
 end
 
-def replace_file(file)
-  link, _target = link_and_target
-
+def replace_file(link, target)
   FileUtils.rm_rf(link)
-  link_file(file)
+  link_system_call(link, target)
 end
 
 def link_and_target(file)
