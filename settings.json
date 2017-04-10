@@ -1,15 +1,25 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontFamily": "Office Code Pro",
-
     "editor.fontSize": 14,
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "blink",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
 
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
 
-    "vim.useSystemClipboard": true,
-
     "javascript.validate.enable": false,
+
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": true,
+
+    "ruby.lint": {
+        "rubocop": true
+    },
+
+    "vim.useSystemClipboard": true,
 
     "vim.otherModesKeyBindings": [
         {
@@ -22,13 +32,9 @@
         }
     ],
 
-    "ruby.lint": {
-        "rubocop": true
-    },
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vs-seti",
 
-    "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "blink",
-
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": true
+    "workbench.editor.closeOnFileDelete": false,
+    "workbench.editor.revealIfOpen": true
 }
