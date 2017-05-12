@@ -13,7 +13,7 @@
     "javascript.validate.enable": false,
 
     "prettier.singleQuote": true,
-    "prettier.trailingComma": true,
+    "prettier.trailingComma": "all",
 
     "ruby.lint": {
         "rubocop": true
@@ -36,5 +36,6 @@
     "workbench.iconTheme": "vs-seti",
 
     "workbench.editor.closeOnFileDelete": false,
-    "workbench.editor.revealIfOpen": true
+    "workbench.editor.revealIfOpen": true,
+    "window.zoomLevel": 0
 }

@@ -7,14 +7,17 @@
   "bogdan-sinitsa.theme-dark-monokai",
   "capaj.vscode-exports-autocomplete",
   "dbaeumer.vscode-eslint",
+  "donjayamanne.githistory",
   "donjayamanne.python",
   "eg2.tslint",
   "esbenp.prettier-vscode",
   "felixfbecker.php-debug",
+  "ms-mssql.mssql",
   "ms-vscode.csharp",
   "ms-vscode.PowerShell",
   "msjsdiag.debugger-for-chrome",
   "rebornix.Ruby",
   "shinnn.stylelint",
+  "shuworks.vscode-table-formatter",
   "vscodevim.vim"
 ]
