@@ -1,42 +1,54 @@
-// Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Office Code Pro",
-    "editor.fontSize": 14,
-    "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "blink",
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-
-    "javascript.validate.enable": false,
-
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": "all",
-
-    "ruby.lint": {
-        "rubocop": true
+  // Place your settings in this file to overwrite the default settings
+  "editor.autoIndent": true,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "blink",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "none",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "javascript.validate.enable": false,
+  "php.suggest.basic": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "vim.easymotion": true,
+  "vim.enableNeovim": true,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vim.leader": ",",
+  "vim.useSystemClipboard": true,
+  "vim.otherModesKeyBindings": [
+    {
+      "before": ["J"],
+      "after": ["ctrl+f"]
     },
-
-    "vim.useSystemClipboard": true,
-
-    "vim.otherModesKeyBindings": [
+    {
+      "before": ["K"],
+      "after": ["ctrl+b"]
+    }
+  ],
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "s"],
+      "after": [],
+      "commands": [
         {
-            "before": ["J"],
-            "after": ["ctrl+f"]
-        },
-        {
-            "before": ["K"],
-            "after": ["ctrl+b"]
+          "command": "editor.action.toggleRenderWhitespace",
+          "args": []
         }
-    ],
-
-    "workbench.colorTheme": "Monokai",
-    "workbench.iconTheme": "vs-seti",
-
-    "workbench.editor.closeOnFileDelete": false,
-    "workbench.editor.revealIfOpen": true,
-    "window.zoomLevel": 0,
-    "vim.disableAnnoyingNeovimMessage": true
+      ]
+    }
+  ],
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.editor.closeOnFileDelete": false,
+  "workbench.editor.revealIfOpen": true,
+  "window.zoomLevel": 0
 }

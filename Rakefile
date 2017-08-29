@@ -3,7 +3,7 @@ require 'json'
 
 desc 'Link vscode settings'
 task :install do
-  %w(settings.json keybindings.json snippets).each do |setting|
+  %w[settings.json keybindings.json snippets].each do |setting|
     link_path setting
   end
 
