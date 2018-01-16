@@ -3,8 +3,8 @@
   "editor.autoIndent": true,
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "blink",
-  "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 14,
+  "editor.fontFamily": "Input Mono Narrow",
+  "editor.fontSize": 15,
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": true,
@@ -46,7 +46,7 @@
       ]
     }
   ],
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Dark (Monokai)",
   "workbench.iconTheme": "vs-seti",
   "workbench.editor.closeOnFileDelete": false,
   "workbench.editor.revealIfOpen": true,
