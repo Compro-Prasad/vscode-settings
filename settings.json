@@ -3,8 +3,8 @@
   "editor.autoIndent": true,
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "blink",
-  "editor.fontFamily": "Input Mono Narrow",
-  "editor.fontSize": 15,
+  "editor.fontFamily": "Iosevka",
+  "editor.fontSize": 16,
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": true,
@@ -16,27 +16,39 @@
   "php.suggest.basic": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
+  "python.linting.pylintPath": "/usr/local/bin/pylint",
   "ruby.lint": {
     "rubocop": true
   },
-  "vim.easymotion": true,
+  "vim.sneak": true,
   "vim.enableNeovim": true,
-  "vim.disableAnnoyingNeovimMessage": true,
   "vim.leader": ",",
+  "vim.visualstar": true,
   "vim.useSystemClipboard": true,
   "vim.otherModesKeyBindings": [
     {
-      "before": ["J"],
-      "after": ["ctrl+f"]
+      "before": [
+        "J"
+      ],
+      "after": [
+        "ctrl+f"
+      ]
     },
     {
-      "before": ["K"],
-      "after": ["ctrl+b"]
+      "before": [
+        "K"
+      ],
+      "after": [
+        "ctrl+b"
+      ]
     }
   ],
   "vim.otherModesKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "s"],
+      "before": [
+        "<leader>",
+        "s"
+      ],
       "after": [],
       "commands": [
         {
